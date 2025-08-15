@@ -1,0 +1,5 @@
+
+# local only
+MainFolder/.env
+uvicorn.log
+
