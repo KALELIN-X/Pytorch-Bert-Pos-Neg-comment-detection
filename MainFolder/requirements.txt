@@ -1,0 +1,21 @@
+---
+
+## 📄 requirements.txt
+```txt
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+psycopg2-binary>=2.9
+SQLAlchemy>=2.0
+python-dotenv>=1.0
+transformers>=4.42
+torch>=2.2
+accelerate>=0.33
+uvicorn>=0.29
+fastapi>=0.111
+pydantic>=2.7
+streamlit>=1.36
+requests>=2.31
+rich>=13.7
+tqdm>=4.66
