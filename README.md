@@ -1,9 +1,11 @@
-# CivicBalance comment evaluator
+# CommentScope comment evaluator
 
 A local Python application with two distinct evaluation tasks:
 
 - **Sentiment (new):** enter a sentence or analyze post comments as positive, neutral or negative. Paste comments, upload a CSV, or retrieve a bounded sample through the official YouTube API when a local key is configured. Post percentages count predicted labels among the analyzed comments.
 - **Emotions & toxicity (reconstructed):** the original six toxicity labels and six positive emotions, with threshold flags, an explanation and a weighted net-goodness heuristic. This task is different from general sentiment: a comment can have both kinds of signals or neither.
+
+CommentScope is the application's new name. Legacy CivicBalance model identifiers, checkpoint paths and database names remain unchanged for compatibility with the preserved training workflow.
 
 ## Repository findings and reconstruction
 
@@ -57,7 +59,6 @@ Windows PowerShell:
 ```powershell
 git clone https://github.com/KALELIN-X/Pytorch-Bert-Pos-Neg-comment-detection.git
 cd Pytorch-Bert-Pos-Neg-comment-detection
-git switch rebuild-comment-evaluator
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -72,7 +73,7 @@ In a second PowerShell terminal at the repository root:
 .\.venv\Scripts\python.exe -m streamlit run MainFolder/app/Dashboard.py --server.address 127.0.0.1
 ```
 
-POSIX equivalent after cloning/switching branch:
+POSIX equivalent after cloning:
 
 ```bash
 python3.12 -m venv .venv

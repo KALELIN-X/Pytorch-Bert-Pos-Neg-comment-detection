@@ -71,7 +71,7 @@ def dashboard(monkeypatch):
 
 def test_initial_page_and_examples_require_no_prediction(dashboard):
     application, get, post = dashboard
-    assert application.title[0].value == "Comment evaluator"
+    assert application.title[0].value == "CommentScope"
     assert "Models ready" in [item.value for item in application.success]
     assert application.text_area[0].value.startswith("Thank you")
     assert get.call_args.args == ("http://127.0.0.1:8000/health",)
