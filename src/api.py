@@ -25,13 +25,13 @@ SCORE_DESCRIPTION = (
     "Net goodness is a weighted heuristic, not a probability or accuracy measure."
 )
 LANDING_PAGE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>CivicBalance API</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>CommentScope API</title>
 <style>body{margin:0;background:#101722;color:#edf3fa;font:17px/1.6 system-ui,sans-serif}
 main{max-width:760px;margin:12vh auto;padding:32px}h1{font-size:42px;line-height:1.15}
 p{color:#b8c7d9}a{color:#72d6c1}code{background:#263448;padding:4px 8px;border-radius:6px}
 nav{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}.eyebrow{color:#72d6c1;letter-spacing:.15em}
 </style></head><body><main><div class="eyebrow">LOCAL COMMENT EVALUATION</div>
-<h1>Comment evaluator API</h1><p>Use <code>POST /sentiment</code> for positive, neutral or negative
+<h1>CommentScope API</h1><p>Use <code>POST /sentiment</code> for positive, neutral or negative
 sentence sentiment, with one result per comment. Batch percentages count predicted labels among the analyzed comments.</p>
 <p>The preserved <code>POST /predict</code> workflow explores six positive emotions and six toxicity signals.
 Its summary describes detected signals, rather than general sentiment. Scores are uncalibrated model outputs,
@@ -140,7 +140,7 @@ def create_app(evaluator=None, sentiment_evaluator=None, youtube_fetcher=None) -
         yield
 
     application = FastAPI(
-        title="CivicBalance API", version="1.0.0", lifespan=lifespan,
+        title="CommentScope API", version="1.0.0", lifespan=lifespan,
         description="Local positive/neutral/negative sentence sentiment and preserved positive-emotion/toxicity evaluation. The original multi-label mode is not binary sentiment classification. Scores are uncalibrated; comments are not persisted.",
         openapi_tags=[
             {"name": "Evaluation", "description": "Bounded, local single-comment and batch prediction."},

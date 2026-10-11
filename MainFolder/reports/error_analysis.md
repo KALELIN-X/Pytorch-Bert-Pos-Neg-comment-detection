@@ -1,4 +1,4 @@
-# Error Analysis — CivicBalance
+# Error Analysis — CommentScope
 
 Record at least **10 FP/FN** examples for each head (toxicity + positive). For each:
 - **text:**

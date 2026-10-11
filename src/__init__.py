@@ -1,1 +1,1 @@
-"""CivicBalance comment evaluation and preserved research utilities."""
+"""CommentScope comment evaluation and preserved research utilities."""

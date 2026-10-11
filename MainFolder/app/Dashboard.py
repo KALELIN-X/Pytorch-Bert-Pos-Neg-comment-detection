@@ -37,7 +37,7 @@ LABEL_NAMES = {
     'mixed_signals': 'Mixed signals', 'no_detected_signals': 'No signals above threshold',
 }
 
-st.set_page_config(page_title='CivicBalance | Comment evaluator', page_icon='💬', layout='wide')
+st.set_page_config(page_title='CommentScope | Comment evaluator', page_icon='💬', layout='wide')
 st.markdown('''
 <style>
 .block-container { max-width: 1160px; padding-top: 2rem; padding-bottom: 3rem; }
@@ -123,8 +123,8 @@ with st.sidebar:
     st.caption('Scores are uncalibrated model outputs, not confidence percentages. Comments are not stored by the application.')
     st.link_button('Open API documentation', endpoint('/docs'), width='stretch')
 
-st.markdown('<div class="eyebrow">CIVICBALANCE / COMMENT EVALUATOR</div>', unsafe_allow_html=True)
-st.title('Comment evaluator')
+st.markdown('<div class="eyebrow">COMMENTSCOPE / COMMENT EVALUATOR</div>', unsafe_allow_html=True)
+st.title('CommentScope')
 st.write('Evaluate a sentence or explore the comments on a post.')
 mode = st.radio('Evaluation mode', ['One comment', 'Post comments'], horizontal=True)
 limit = 100 if sentiment else 20

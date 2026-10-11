@@ -1,4 +1,4 @@
-# CivicBalance support files
+# CommentScope support files
 
 The application source is in ../src. Run commands from the repository root.
 See the [root README](../README.md) for installation, prediction, optional BERT

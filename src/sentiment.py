@@ -1,4 +1,4 @@
-"""New sentence sentiment classification, distinct from CivicBalance's 12 labels."""
+"""CommentScope sentiment classification, distinct from the original 12 labels."""
 
 import json
 from pathlib import Path
