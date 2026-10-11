@@ -1,0 +1,28 @@
+# Optional: docker compose -f MainFolder/docker-compose.yml up --build app
+# Download public models locally first; model files are mounted read-only.
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: MainFolder/Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ../.models:/app/.models:ro
+      - ./artifacts:/app/MainFolder/artifacts:ro
+    environment:
+      INFERENCE_BACKEND: ${INFERENCE_BACKEND:-public}
+  # Preserved historical SQL tools; this service is opt-in and not needed by API.
+  db:
+    profiles: [database]
+    image: postgres:16
+    environment:
+      POSTGRES_DB: civicbalance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

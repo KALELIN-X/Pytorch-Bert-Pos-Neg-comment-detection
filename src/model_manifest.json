@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "purpose": "Reconstructed local inference using public pretrained multi-label models; not the missing original CivicBalance checkpoint.",
+  "max_tokens": 192,
+  "models": [
+    {
+      "key": "toxicity",
+      "repo_id": "unitary/toxic-bert",
+      "revision": "4d6c22e74ba2fdd26bc4f7238f50766b045a0d94",
+      "license": "Apache-2.0",
+      "model_card": "https://huggingface.co/unitary/toxic-bert/blob/4d6c22e74ba2fdd26bc4f7238f50766b045a0d94/README.md",
+      "source_data": "Model card identifies Jigsaw Toxic Comment Classification Challenge training data.",
+      "required_labels": ["toxic", "severe_toxic", "obscene", "threat", "insult", "identity_hate"],
+      "num_labels": 6,
+      "required_files": ["config.json", "model.safetensors", "vocab.txt"],
+      "limitations": "This Hugging Face variant differs from Detoxify releases. Published Detoxify results are not evaluation results for this reconstruction. Toxicity scores can reflect dataset bias and do not establish intent."
+    },
+    {
+      "key": "positive_emotions",
+      "repo_id": "SamLowe/roberta-base-go_emotions",
+      "revision": "d75048347613a25d77de8cf6412eaae9fa7b26be",
+      "license": "MIT",
+      "model_card": "https://huggingface.co/SamLowe/roberta-base-go_emotions/blob/d75048347613a25d77de8cf6412eaae9fa7b26be/README.md",
+      "source_data": "GoEmotions, English Reddit comments labeled with 27 emotions plus neutral.",
+      "required_labels": ["admiration", "gratitude", "joy", "pride", "love", "optimism"],
+      "num_labels": 28,
+      "required_files": ["config.json", "model.safetensors", "vocab.json", "merges.txt"],
+      "limitations": "The application selects the original project's six positive emotion categories from this 28-label model. Lack of these signals does not establish negative sentiment or neutrality."
+    }
+  ],
+  "allow_patterns": [
+    "config.json",
+    "tokenizer_config.json",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "vocab.txt",
+    "vocab.json",
+    "merges.txt",
+    "model.safetensors"
+  ],
+  "score_interpretation": "Sigmoid model scores are uncalibrated. The weighted net_goodness score is a heuristic, not confidence, accuracy, or an objective measure of a person."
+}

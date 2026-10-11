@@ -1,0 +1,7 @@
+# Optional local training, ETL and SQL analytics. Core inference is in requirements.txt.
+-r requirements.txt
+pandas==2.3.3
+scikit-learn==1.7.2
+matplotlib==3.10.6
+SQLAlchemy==2.0.43
+psycopg2-binary==2.9.10

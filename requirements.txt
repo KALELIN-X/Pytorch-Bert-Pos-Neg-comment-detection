@@ -1,0 +1,12 @@
+# Python 3.12. Install the CPU PyTorch wheel first (see README).
+torch==2.8.0
+transformers==4.55.4
+huggingface-hub==0.34.4
+safetensors==0.6.2
+numpy==2.2.6
+fastapi==0.116.1
+pydantic==2.11.9
+uvicorn==0.35.0
+streamlit==1.49.1
+requests==2.32.5
+python-dotenv==1.1.1
