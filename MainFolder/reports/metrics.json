@@ -1,0 +1,11 @@
+{
+  "model": "bert-base-uncased",
+  "epochs": 3,
+  "max_len": 192,
+  "metrics": {
+    "toxicity": { "micro_f1": null, "macro_f1": null, "roc_auc": null, "pr_auc": null },
+    "positivity": { "micro_f1": null, "macro_f1": null, "roc_auc": null, "pr_auc": null }
+  },
+  "latency_ms": { "cpu_p50": null, "cpu_p95": null, "gpu_p50": null },
+  "ngs_precision_improvement_pct": null
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "purpose": "Newly added three-class sentence sentiment classification, separate from the original positive-emotion/toxicity workflow.",
+  "repo_id": "lxyuan/distilbert-base-multilingual-cased-sentiments-student",
+  "revision": "cf991100d706c13c0a080c097134c05b7f436c45",
+  "license": "Apache-2.0",
+  "model_card": "https://huggingface.co/lxyuan/distilbert-base-multilingual-cased-sentiments-student/blob/cf991100d706c13c0a080c097134c05b7f436c45/README.md",
+  "architecture": "DistilBERT sequence classifier",
+  "labels": ["positive", "neutral", "negative"],
+  "max_tokens": 192,
+  "source_data": "tyqiangz/multilingual-sentiments, used without its annotations for this model's zero-shot teacher distillation example.",
+  "teacher_model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+  "required_files": ["config.json", "model.safetensors", "vocab.txt"],
+  "allow_patterns": ["config.json", "model.safetensors", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json", "vocab.txt"],
+  "limitations": "Softmax outputs are uncalibrated model scores, not reliable confidence. Sarcasm, mixed sentiment, missing context, language, and domain changes can affect predictions. Model-card teacher/student agreement is not labeled accuracy and is not an evaluation result for this project. Post percentages count discrete predicted labels; they do not average model scores or measure all readers' opinions."
+}

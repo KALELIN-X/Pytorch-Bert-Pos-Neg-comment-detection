@@ -1,0 +1,9 @@
+{
+  "purpose": "Synthetic demonstration comments, not a labeled evaluation dataset.",
+  "comments": [
+    "Thank you for explaining this so clearly. I really appreciate your help!",
+    "You are an idiot. Shut up and stop wasting everyone's time.",
+    "Great, another meeting that could have been an email."
+  ],
+  "note": "Ambiguous or sarcastic comments have no required label. Inspect and discuss the actual outputs."
+}

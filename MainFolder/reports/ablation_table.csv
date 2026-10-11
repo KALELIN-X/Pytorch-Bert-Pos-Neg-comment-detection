@@ -1,0 +1,2 @@
+model,alpha,beta,max_len,batch_size,class_weights,freeze_layers,micro_f1_toxic,micro_f1_positive,pr_auc_toxic,pr_auc_positive,notes
+bert-base-uncased,1.0,1.0,192,16,yes,none,,,,,
